@@ -1,0 +1,23 @@
+# i = 1
+# while i <= 5:
+#     print(f"小红在吃第{i}个苹果")
+#     if i == 3:
+#         print("小红吃饱了，不想再吃了")
+#         break # 结束所在的循环
+#     i += 1
+# print("循环结束")
+i = 1
+while i <= 5:
+    print(f"小红在吃第{i}个苹果")
+    if i == 3:
+        print(f"吃到了一条大虫子，第{i}个苹果不吃了")
+        i += 1 
+        continue # 在continue之前，一定要修改计算器，否则会陷入死循环
+    
+    i += 1 
+for i in range(5):
+    if i == 3:
+        print(f"吃到了一条大虫子，第{i}个苹果不吃了")
+        continue   # 跳过本次循环，进入下一次循环
+    print(f"小红在吃第{i}个苹果")
+print("循环结束")
