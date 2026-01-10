@@ -1,1 +1,71 @@
+# 1.字符串常见操作
+# print(10+10)    #20，整形相加，+是运算符
+# print("10"+"10")  #1010，字符串类型相加，+是字符串拼接
+# name1 ="嘻嘻"
+# name2 ="哈哈"
+# print(name1+name2)
+# print(name1,name2, sep="")
+# print(name1*10)  #
+# print("xixihaha\n"*5)
+#需要输出多少次*后面就写多少
+# print("=\t"*50)
+#成员运算符
+#作用： 检查字符串是否博阿寒了某个子字符串（即某个字符或者多个字符）
+# in： 如果包含的话，返回true，不包含返回false
+# not in: 如果不包含的话，返回true，包含返回false
+# name ="bingbing"
+# print("b" in name)  #True
+# print("B" in name)  #False  #区分大小写
+# print("bb" in name)  #false
+# print("x" in name)  #False              
+# print("bb" not in name)  #true
+# print("x" not in name)  #True           
+name2 ="王鑫"
+print("王" in name2)  #True
+print("鑫" in name2)  #True
 
+# 2.3 下标  
+# 作用 通过下表能够快速找到对应的数据
+# 格式：字符串变量名[下标值]
+# 下标从0开始，依次递增
+# name ="abcdef"    
+# print(name[0])  #a
+# print(name[1])  #b        
+# print(name[2])  #c
+# print(name[3])  #d    
+# print(name[4])  #e
+# print(name[5])  #f    
+# print(name[6])  #报错，字符串下标越界
+# print(name[100])  #报错，字符串下标越界   
+# 2.4 负数下标
+# 作用：从字符串的最后一个字符开始数，依次递减  
+# 格式：字符串变量名[负数下标值]
+# name ="abcdef"    
+# print(name[-1])  #f
+# print(name[-2])  #e   
+# print(name[-3])  #d
+# print(name[-4])  #c   
+# print(name[-5])  #b
+# print(name[-6])  #a
+# print(name[-7])  #报错，字符串下标越界
+# print(name[-100])  #报错，字符串下标越界  
+# 3.字符串切片
+# 作用：通过切片能够获取字符串中的一部分数据
+# 格式：字符串变量名[开始下标值:结束下标值:步长值]
+# 说明：
+# （1）开始下标值：表示切片的起始位置（包含该位置的字符），默认为0
+# （2）结束下标值：表示切片的结束位置（不包含该位置的字符），默认为字符串的长度
+# （3）步长值：表示切片时每次移动的距离，默认为1
+name ="abcdef"
+print(name[0:3])  #abc  包含下标0，不包含下标3
+print(name[2:5])  #cde  包含下标2，不包含下标5
+print(name[1:])   #bcdef  从下标1开始切片 到字符串末尾
+print(name[:4])   #abcd  从字符串开头开始切片 到下标4结束（不包含下标4）
+print(name[:])    #abcdef  从字符串开头开始切片 到字符串末尾
+print(name[::2])  #ace  步长为2，表示每次移动2个位置进行切片
+print(name[1::2]) #bdf  从下标1开始切片，步长为2
+print(name[::3])  #ad  步长为3，表示每次移动3个位置进行切片
+print(name[::-1]) #fedcba  步长为-1，表示反向切片
+print(name[5::-1]) #fedcba  从下标5开始反向切片
+print(name[:3:-1]) #fed  从字符串末尾开始反向切片 到下标3结束（不包含下标3）
+print(name[4:1:-1]) #edc  从下标4开始反向切片 到下标1结束（不包含下标1）   
