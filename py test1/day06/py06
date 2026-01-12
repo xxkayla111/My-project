@@ -1,0 +1,41 @@
+# name ="bingbing"
+# print(name.count("b"))  #3  统计字符串中某个字符出现的次数
+# print(name.count("a"))  #0
+# # 3.3判断字符串是否以指定的子字符串开头或结尾
+# # startswith(): 判断字符串是否以指定的子字符串开头
+# # endswith(): 判断字符串是否以指定的子字符串结尾
+
+# # 3.4 isupper(): 判断字符串中的字母是否全部为大写
+# # 3.5 islower(): 判断字符串中的字母是否全部为小写
+# st ="HELLO"
+# print(st.isupper())  #True
+# st2 ="hello"
+# print(st2.islower())  #True
+
+# 3.6 修改元素
+# 1.replace(): 替换字符串中的指定子字符串
+# str1 ="hello world"
+# str2 = str1.replace("world", "python")
+# print(str2)  #hello python
+# print(str1)  #hello world  原字符串不变
+# 2.split(): 将字符串按照指定的子字符串进行切割，返回一个列表
+str3 ="apple,banana,orange"
+list1 = str3.split(",") #按照逗号进行切割
+print(list1)  #['apple', 'banana', 'orange'] 以列表的形式返回
+# 3.join(): 将列表中的字符串元素连接成一个新的字符串，指定连接符
+list2 = ['apple', 'banana', 'orange']
+str4 = ",".join(list2)  #以逗号作为连接符
+print(str4)  #apple,banana,orange
+
+# 4.capitalize(): 将字符串的第一个字符转换为大写，其余字符转换为小写
+str5 ="hello world"
+str6 = str5.capitalize()    
+print(str6)  #Hello world
+# 5.lower(): 将字符串中的所有字母转换为小写
+str7 ="HELLO WORLD"
+str8 = str7.lower()
+print(str8)  #hello world
+# 6.upper(): 将字符串中的所有字母转换为大写
+str9 ="hello world"
+str10 = str9.upper()
+print(str10)  #HELLO WORLD
