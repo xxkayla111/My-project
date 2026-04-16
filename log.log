@@ -1,0 +1,5 @@
+2026-04-16 18:26:35,679 - root - DEBUG - 我是debug日志
+2026-04-16 18:26:35,680 - root - INFO - 我是info日志
+2026-04-16 18:26:35,680 - root - WARNING - 我是warning日志
+2026-04-16 18:26:35,680 - root - ERROR - 我是error日志
+2026-04-16 18:26:35,680 - root - CRITICAL - 我是critical日志

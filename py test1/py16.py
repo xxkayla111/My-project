@@ -61,7 +61,75 @@
 # 单例模式：每一次实例化所创建的对象都是同一个，内存地址都一样
 
 # 2.4  通过模块导入实现单例模式
-from pytest02 import te as te01
-print(te01,id(te01))
-from pytest02 import te as te02
-print(te02,id(te02))
+# from pytest02 import te as te01
+# print(te01,id(te01))
+# from pytest02 import te as te02
+# print(te02,id(te02))
+
+
+# 2.5 应用场景
+# 1.回收站对象
+# 2.音乐播放器，一个音乐播软件负责音乐播放的对象只有一个
+# 3.开发游戏软件，游戏软件中只有一个游戏对象，负责游戏的运行和管理
+# 4.数据库配置，数据库连接池只有一个，负责数据库的连接和断开
+
+
+# 3.魔法方法
+# 在python里面,有一些方法是__开头的,是__结尾的,这些方法被称为魔法方法，指的是具有特殊功能的函数
+# 1.__init__() 和 __new__() 方法
+# 3.__repr__() 方法
+# 6.__len__() 方法
+# 7.__getitem__() 方法
+# 8.__setitem__() 方法
+# 9.__delitem__() 方法
+
+# 3.1
+# 10.__doc__ :类、函数的描述信息
+# class Person:
+#     """这是一个类,用来表示一个人"""  #只能使用多行注释，单行注释无效
+#     pass
+# print(Person.__doc__)
+
+# 3.2__module__ :表示当前操作对象所属模块
+# 3.3__class__ :表示当前操作对象所属类
+# import pytest02
+# b = pytest02.B()
+# print(b.__module__)  #输出所在模块
+# print(b.__class__)  #输出所在类     
+# b.funa()
+
+# 3.4.__str__() 方法 : 对象的描述信息
+# 如果类中定义了此方法，那么在打印对象时，默认输出该方法的返回值。也就是打印方法中return的内容
+# 注意：__str__()方法必须返回一个字符串，不能返回其他类型的数据
+# class B:
+#     def __str__(self):
+#         return "这是一个B对象"
+# b = B()
+# print(b)     #输出：这是一个B对象
+
+# # 3.5.__del__() 方法 : 析构函数，对象的销毁
+# # 当对象被引用计数减为0时，会自动调用__del__()方法来销毁对象
+# class B:
+#     def __del__(self):
+#         print("这是__del__()方法，销毁对象")
+# b = B()
+# del b  #删除对象b，输出：这是__del__()方法，销毁对象
+# 3.6.__call__() 方法 : 使一个实例对象成为一个可调用对象，就像函数那样可以调用
+# 可调用对象：函数、类、实例对象，凡是可以把一对括号()放在对象后面，就可以称之为可调用对象
+# callable(): 判断一个对象是否是可调用对象
+# def func():
+#     print("这是一个func函数")
+# func()
+
+# print(callable(func)) #True
+# name = "bingbing"
+# # name()  #报错，字符串不能调用
+# print(callable(name)) #False
+
+
+class A:
+    def __call__(self):
+        print("这是__call__()方法")
+a = A()
+a()   #调用一个可调用的实例对象，其实就是在调用它的__call__()方法
+print(callable(a)) 
